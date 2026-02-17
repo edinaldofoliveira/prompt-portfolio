@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edinaldo Oliveira | Prompt Engineering Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="profile-header">
+        <div class="container">
+            <h1 class="name">Edinaldo Oliveira</h1>
+            <h2 class="title">Consultor de TI & Engenheiro de Prompt</h2>
+        </div>
+    </header>
+
+    <main class="gallery-container">
+
+        <article class="prompt-card">
+            <div class="image-wrapper">
+                <img src="images/blue_gala_dress.svg" alt="Fotografia de moda cinematográfica" loading="lazy">
+            </div>
+
+            <div class="prompt-details">
+                <div class="prompt-header">
+                    <h3>Cinematic Gala Fashion</h3>
+                    <span class="tag">Midjourney v6</span>
+                </div>
+
+                <div class="prompt-content">
+                    <h4>PROMPT UTILIZADO</h4>
+                    <p>
+                        Uma fotografia de moda cinematográfica em plano geral capturada por uma ARRI Alexa 65 com lente
+                        35mm T1.8, apresentando uma jovem mulher de 24 anos com fenótipo caucasiano mediterrâneo e
+                        longos cabelos castanhos ondulados adornados por uma tiara de cristais prateados, posicionada
+                        centralmente em uma pose de arco simétrico graciosamente elevado. Ela traja um suntuoso vestido
+                        de gala em azul-marinho profundo (midnight blue) com corpete estruturado em bordados densos de
+                        pedrarias e uma saia monumental de tule em babados, intensamente incrustada com glitter e
+                        cristais que simulam uma galáxia cintilante sob física de luz realista. O cenário consiste na
+                        base de uma imponente escadaria dupla de mármore envelhecido com corrimões de ferro forjado e
+                        bronze dentro de um hall palaciano sombrio, onde uma iluminação de contraluz (backlight)
+                        dramática em tons de laranja e âmbar (2500K) corta uma névoa densa e fumaça branca rasteira,
+                        criando um halo etéreo e god rays volumétricos, enquanto uma luz frontal suave (5600K) preserva
+                        a textura natural da pele (Fitzpatrick II) e os detalhes macro do tecido. A composição
+                        centralizada e o ângulo baixo reforçam a monumentalidade da cena, finalizada com um color
+                        grading de alto contraste que opõe as sombras frias do mármore ao calor vibrante do backlight,
+                        mantendo a integridade absoluta dos tons de pele no vectorscope.
+                    </p>
+                    <button class="copy-btn" onclick="copyPrompt(this)">Copiar Prompt</button>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Edinaldo Oliveira. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function copyPrompt(btn) {
+            const text = btn.previousElementSibling.innerText;
+            navigator.clipboard.writeText(text);
+            const originalText = btn.innerText;
+            btn.innerText = "Copiado!";
+            setTimeout(() => btn.innerText = originalText, 2000);
+        }
+    </script>
+</body>
+
+</html>
